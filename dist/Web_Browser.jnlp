@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="Web_Browser.jnlp">
+  <information>
+    <title>Web_Browser</title>
+    <vendor>My PC</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="Web_Browser.jar" size="415519" download="eager" />
+    <jar href="lib\mysql-connector-java-5.1.43-bin.jar" size="999018" download="eager" />
+    <jar href="lib\rs2xml.jar" size="171578" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="Web_Browser" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="Web_Browser"  name="Web_Browser" />
+  <update check="always"/>
+</jnlp>

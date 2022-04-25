@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.web.WebView?>
+
+<BorderPane fx:id="bpMainBorder" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="DefaultController">
+   <center>
+      <BorderPane prefHeight="100.0" prefWidth="100.0">
+         <top>
+            <ToolBar minHeight="-Infinity" minWidth="-Infinity" prefHeight="41.0" prefWidth="1200.0" style="-fx-background-color: #b3b2b6;" BorderPane.alignment="CENTER">
+              <items>
+                  <Button mnemonicParsing="false" onAction="#backButtonFunc" prefHeight="25.0" prefWidth="33.0" style="-fx-background-radius: 50;">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/left.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <tooltip>
+                        <Tooltip text="back" />
+                     </tooltip>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#forwardButtonFunc" prefHeight="25.0" prefWidth="35.0" style="-fx-background-radius: 50;">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/right.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <tooltip>
+                        <Tooltip text="forward" />
+                     </tooltip>
+                  </Button>
+                  <Label prefHeight="17.0" prefWidth="5.0" />
+                  <Button mnemonicParsing="false" onAction="#refreshButtonFunc" prefHeight="25.0" prefWidth="33.0">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/refresh-arrow.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <tooltip>
+                        <Tooltip text="refresh" />
+                     </tooltip>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#homeButtonFunc" prefHeight="13.0" prefWidth="18.0" style="-fx-background-color: transparent;">
+                     <graphic>
+                        <ImageView fitHeight="39.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/home.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <tooltip>
+                        <Tooltip text="home" />
+                     </tooltip>
+                  </Button>
+                  <HBox prefHeight="31.0" prefWidth="751.0">
+                     <children>
+                        <TextField fx:id="tfSearchBar" prefHeight="30.0" prefWidth="709.0" promptText="type URL to search">
+                           <font>
+                              <Font name="Calibri Light" size="15.0" />
+                           </font></TextField>
+                        <Label prefHeight="17.0" prefWidth="16.0" />
+                        <ProgressIndicator fx:id="piProgressBar" opacity="0.76" prefHeight="31.0" prefWidth="28.0" visible="false">
+                           <effect>
+                              <Bloom threshold="0.0" />
+                           </effect>
+                        </ProgressIndicator>
+                     </children>
+                  </HBox>
+                  <Button mnemonicParsing="false" onAction="#zoomInFunc" prefHeight="13.0" prefWidth="17.0" style="-fx-background-radius: 10; -fx-background-color: transparent;">
+                     <graphic>
+                        <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/plus-sign.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <tooltip>
+                        <Tooltip text="zoom in" />
+                     </tooltip>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#zoomOutFunc" prefHeight="22.0" prefWidth="26.0" style="-fx-background-radius: 10; -fx-background-color: transparent;">
+                     <tooltip>
+                        <Tooltip text="zoom out" />
+                     </tooltip>
+                     <graphic>
+                        <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/minus%20(1).png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="bookmarksButton" mnemonicParsing="false" prefHeight="24.0" prefWidth="23.0" style="-fx-background-radius: 10; -fx-background-color: transparent;">
+                     <tooltip>
+                        <Tooltip text="bookmark" />
+                     </tooltip>
+                     <graphic>
+                        <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/1111.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="addBookmarksButton" mnemonicParsing="false" prefHeight="24.0" prefWidth="23.0" style="-fx-background-radius: 10; -fx-background-color: transparent;">
+                     <tooltip>
+                        <Tooltip text="add bookmark" />
+                     </tooltip>
+                     <graphic>
+                        <ImageView fitHeight="26.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/add-button.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="historyButton" mnemonicParsing="false" prefHeight="22.0" prefWidth="26.0" style="-fx-background-radius: 10; -fx-background-color: transparent;">
+                     <tooltip>
+                        <Tooltip text="History" />
+                     </tooltip>
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/history.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               
+                  <Button fx:id="aboutBt" mnemonicParsing="false" prefHeight="22.0" prefWidth="26.0" style="-fx-background-radius: 10; -fx-background-color: transparent;">
+                     <tooltip>
+                        <Tooltip text="About" />
+                     </tooltip>
+                     <graphic>
+                        <ImageView fitHeight="24.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/list.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+              </items>
+            </ToolBar>
+         </top>
+         <center>
+            <WebView fx:id="wvWebView" prefHeight="828.0" prefWidth="1200.0" BorderPane.alignment="CENTER" />
+         </center>
+         <bottom>
+            <HBox prefHeight="19.0" prefWidth="1078.0" style="-fx-background-color: #1c2938;" BorderPane.alignment="CENTER">
+               <children>
+                  <Label fx:id="lblStatus" prefHeight="17.0" prefWidth="635.0" text="status" textFill="#f27b7b" />
+               </children>
+            </HBox>
+         </bottom>
+      </BorderPane>
+   </center>
+</BorderPane>
