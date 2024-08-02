@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #1c2938;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171">
+   <children>
+      <ImageView fitHeight="116.0" fitWidth="122.0" layoutX="464.0" layoutY="270.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/wolf.png" />
+         </image>
+      </ImageView>
+      <TextArea layoutY="121.0" prefHeight="141.0" prefWidth="600.0" style="-fx-background-color: #3a3b3c;" text="Build On            &#10;                                    # JAVA FX  GUI&#10;                                   # MySQL Database&#10;&#10;with the Functionalities of&#10;&#10;                                   - User Login&#10;                                   - New Tab&#10;                                   - History&#10;                                   - Bookmarks&#10;                   ">
+         <font>
+            <Font name="System Bold Italic" size="23.0" />
+         </font>
+      </TextArea>
+      <Label layoutX="71.0" layoutY="22.0" prefHeight="59.0" prefWidth="376.0" text="A Simple Web Browser" textFill="#eeeaea">
+         <font>
+            <Font name="System Bold Italic" size="25.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
